@@ -17,8 +17,8 @@ build: get
 	env GOOS=${GOOS} GOARCH=${GOARCH} go build -o build/terraform-config-inspect -v -ldflags "-X 'github.com/neermitt/terraform-config-inspect/cmd.Version=${VERSION}'"
 
 version: build
-	chmod +x ./build/opsos
-	./build/opsos version
+	chmod +x ./build/terraform-config-inspect
+	./build/terraform-config-inspect --version
 
 deps:
 	go mod download
